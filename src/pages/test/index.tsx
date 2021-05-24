@@ -18,7 +18,7 @@ const Test: React.FC = () => {
         console.log('1234',Taro.getCurrentInstance().router)
       },[])
     return (
-        <View className='test'>
+      <View className='test'>
         <Text >测试一下</Text>
       </View>
     )
