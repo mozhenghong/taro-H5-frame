@@ -1,7 +1,8 @@
 export default {
   pages: [
-    'pages/index/index',
-    'pages/test/index'
+    'pages/register/index',
+    'pages/record/index',
+    'pages/confirm/index',
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -9,24 +10,25 @@ export default {
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black'
   },
-  tabBar: {
-    color: "#555555",
-    selectedColor: "#568AFF",
-    borderStyle: "black",
-    backgroundColor: "#fff",
-    list: [
-      {
-        pagePath: "pages/index/index",
-        iconPath: "assets/register.png",
-        selectedIconPath: "assets/registerActive.png",
-        text: "预约挂号",
-      },
-      {
-        pagePath: "pages/test/index",
-        iconPath: "assets/record.png",
-        selectedIconPath: "assets/recordActive.png",
-        text: "挂号记录",
-      },
-    ],
-  },
+  // tabBar: {
+  //   color: "#555555",
+  //   selectedColor: "#568AFF",
+  //   borderStyle: "black",
+  //   backgroundColor: "#fff",
+  //   list: [
+  //     {
+  //       pagePath: "pages/register/index",
+  //       iconPath: "assets/register.png",
+  //       selectedIconPath: "assets/registerActive.png",
+  //       text: "预约挂号",
+  //     },
+  //     {
+  //       pagePath: "pages/record/index",
+  //       iconPath: "assets/record.png",
+  //       selectedIconPath: "assets/recordActive.png",
+  //       text: "挂号记录",
+  //       dot: true
+  //     },
+  //   ],
+  // },
 }

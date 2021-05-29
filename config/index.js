@@ -43,7 +43,8 @@ const config = {
     }
   },
   h5: {
-    publicPath: '/',
+    esnextModules: ['taro-ui'],
+    publicPath: process.env.NODE_ENV==='development'?'/':'./',
     staticDirectory: 'static',
     postcss: {
       autoprefixer: {
@@ -60,7 +61,7 @@ const config = {
       }
     },
     devServer:{
-      host: 'localhost',
+      // host: 'localhost',
       port: 8001,
       proxy: {
         '/api': {
