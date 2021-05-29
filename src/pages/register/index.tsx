@@ -5,13 +5,7 @@ import { AtModal, AtModalHeader, AtModalContent,AtTabBar} from "taro-ui"
 
 import './index.less'
 import moment from 'moment'
-import timeIconSrc from '../../assets/timeIcon.png'
-import selectSrc from '../../assets/select.png'
-import orderSrc from '../../assets/order.png'
-import waitIconSrc from '../../assets/waitIcon.png'
-import avatorSrc from '../../assets/avator.png'
-import registerActive from '../../assets/registerActive.png'
-import record from '../../assets/record.png'
+
 const Register: React.FC = () => {
   const [timeSel, setTimeSel] = useState([])
   const [time, setTime] = useState('')
@@ -58,7 +52,7 @@ const Register: React.FC = () => {
             >
               <View className="time-content">
                 {time? time : '请选择时间'}
-                <img src={timeIconSrc} alt="" />
+                <img src={require('../../assets/timeIcon.png')} alt="" />
               </View>
             </Picker>
           </View>
@@ -76,7 +70,7 @@ const Register: React.FC = () => {
             <span className="department">
               {department}
             </span>
-            <img src={selectSrc} alt="" />
+            <img src={require('../../assets/select.png')} alt="" />
           </View>
         </Picker>
       </View>
@@ -85,15 +79,15 @@ const Register: React.FC = () => {
           return (
             <View className='at-row row-wrap'>
               <View className='at-col at-col-5 doctor-name'>
-                <img src={avatorSrc} />
+                <img src={require('../../assets/avator.png')} />
                 <span className="name">啦啦啦啦啦啦啦啦啦啦</span>
               </View>
               <View className='at-col at-col-4 wait-people'>
-                <img src={waitIconSrc} />
+                <img src={require('../../assets/waitIcon.png')} />
                 等待中20人
               </View>
               <View className='at-col at-col-3 order-action'>
-                <img src={orderSrc} className="order-img" onClick={() => {
+                <img src={require('../../assets/order.png')} className="order-img" onClick={() => {
                   Taro.navigateTo({
                     url: `/pages/confirm/index?id=${item.id}`
                   })
@@ -123,8 +117,8 @@ const Register: React.FC = () => {
       <AtTabBar
         fixed={true}
         tabList={[
-          { title: 'xxx', image: registerActive},
-          { title: 'yyy', image: record ,  dot: true},
+          { title: 'xxx', image: require('../../assets/registerActive.png')},
+          { title: 'yyy', image: require('../../assets/record.png') ,  dot: true},
         ]}
         onClick={(current)=>{
           if(current===1){

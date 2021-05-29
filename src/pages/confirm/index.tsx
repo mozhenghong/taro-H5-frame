@@ -3,7 +3,6 @@ import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro';
 import { AtModal, AtModalHeader, AtModalContent} from "taro-ui"
 import './index.less'
-import avatorSrc from '../../assets/avator.png'
 
 
 const Confirm: React.FC = () => {
@@ -14,7 +13,7 @@ const Confirm: React.FC = () => {
     <View className='confirm-wrap'>
       <View className='register-detail-wrap'>
         <View className='doctor-avator'>
-          <img src={avatorSrc} alt="" />
+          <img src={require('../../assets/avator.png')} alt="" />
           我叫啥
         </View>
         <View className='clinic-wrap'>

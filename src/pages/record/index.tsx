@@ -4,8 +4,6 @@ import Taro from '@tarojs/taro';
 import { AtTabBar } from "taro-ui"
 import './index.less'
 import { getDepartmentList } from '../../services/test';
-import register from '../../assets/register.png'
-import recordActive from '../../assets/recordActive.png'
 
 const Record: React.FC = () => {
   const [datas, setDatas] = useState([{ id: 1 }, { id: 2 }, { id: 1 }, { id: 2 }])
@@ -79,8 +77,8 @@ const Record: React.FC = () => {
       <AtTabBar
         fixed={true}
         tabList={[
-          { title: 'xxx', image: register},
-          { title: 'yyy', image: recordActive ,  dot: true},
+          { title: 'xxx', image: require('../../assets/register.png')},
+          { title: 'yyy', image: require('../../assets/recordActive.png') ,  dot: true},
         ]}
         onClick={(current)=>{
           if(current===0){
